@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio JavaScript</title>
+</head>
+<body>
+    <label id="aluno">Aluno não identificado</label>
+    <button onclick="boasVindas()">Boas vindas!!!</button>
+    <button onclick="identificacao()">Identifique-se</button>
+    <script>
+      /*alert("Olá 1H3");*/
+      function boasVindas() {
+        alert('Boa noite!!!');
+      }
+
+      function identificacao() {
+        let aluno = document.getElementById('aluno');
+
+        let nome = prompt('Quem é você? ');
+        /*alert('Olá, '+ nome +'! É um prazer te ter na aula!');*/
+        if (nome == null) {
+            aluno.innerText = 'Que pena, você não se identificou.';
+            //alert('Que pena, você não se identificou.');
+        
+        } else if (nome == '') {
+            aluno.innerText = 'Favor informar um nome!!!';  
+            //alert('Favor informar um nome!!!');
+        }
+         else {
+            aluno.innerText = `Olá, ${nome}! É um prazer ter você na aula!`; 
+            //alert(`Olá, ${nome}! É um prazer ter você na aula!`);
+        }
+      }
+
+      /*boasVindas()*/
+    </script>
+</body>
+</html>

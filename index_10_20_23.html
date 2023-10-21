@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <button onclick="calcular()">Calcular</button>
+        <button id="calcular2">Calcular 2 </button>
+        <br>
+        <label id="resultado">Resultado = 0</label>  
+        <script> // atribui no button a função "calcular", assim ao clicar "onclick" será solta a função
+
+        let calcular2 = document.getElementById('calcular2')
+        calcular2.addEventListener('click', () => calcular()) // = "onclick" na raça
+            function calcular() { 
+                //let valor1 = Number(prompt('Informe o 1° valor')); // aqui é o Console.Write + Atribuir a variável tudo junto
+                //let valor2 = Number(prompt('Informe o 2° valor'));
+                //let resultado = valor1 + valor2;
+
+                let valor1 = prompt('Informe o 1° valor'); 
+                let valor2 = prompt('Informe o 2° valor');
+                let resultado = Number(valor1) + Number(valor2);
+
+                let labelResultado = document.getElementById('resultado');
+                //labelResultado.innerText = '<b>' + resultado + '</b>';
+                labelResultado.innerHTML = 'Resultado = <b>' + resultado + '</b>';
+
+                //alert(resultado); 
+            }
+        </script>
+    </body>
+</html>
